@@ -1,5 +1,4 @@
 local Workspace = require('workspace')
-local inspect = require('inspect')
 local utils = require("utils")
 
 local Config = {}
