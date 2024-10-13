@@ -16,6 +16,8 @@ jobs:
 
     steps:
       - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
       
       - name: Create plenary directory
         run: mkdir -p ~/.local/share/nvim/site/pack/plenary/start
