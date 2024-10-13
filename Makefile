@@ -1,5 +1,5 @@
 test:
-	busted -lpath="./lua/?.lua" lua/*_spec.lua
+	nvim --headless -c "PlenaryBustedDirectory lua/"
 
 
 
