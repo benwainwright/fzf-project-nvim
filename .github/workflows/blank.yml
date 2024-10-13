@@ -1,0 +1,31 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: rhysd/action-setup-vim@v1
+      
+      - name: Create plenary directory
+        run: mkdir -p ~/.local/share/nvim/site/pack/plenary/start
+    
+      - name: Install Plenary.nvim
+        run: |
+          git clone https://github.com/nvim-lua/plenary.nvim.git \
+          ~/.local/share/nvim/site/pack/plenary/start/plenary.nvim
+
+      - name: Run tests
+        run: 	nvim --headless -c "PlenaryBustedDirectory lua/"
+
+
