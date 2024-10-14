@@ -6,7 +6,7 @@ local utils = require("utils")
 local command = "fd"
 
 function Workspace:new(params)
-	local instance = Folder.new(self, { path = params.path, command = command })
+	local instance = Folder.new(self, { path = params.path, command = params.command, name = params.name })
 	setmetatable(instance, self)
 	self.__index = self
 	return instance

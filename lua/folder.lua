@@ -9,7 +9,7 @@ function Folder:new(params)
 	utils.check_variable_type("params.command", params.command, "string")
 	utils.check_variable_type("params.path", params.path, "string")
 
-	local folder = setmetatable({ path = params.path, command = params.command }, Folder)
+local folder = setmetatable({ path = params.path, command = params.command }, Folder)
 	return folder
 end
 

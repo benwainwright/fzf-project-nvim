@@ -1,5 +1,5 @@
 test:
-	nvim --headless -c "PlenaryBustedDirectory lua/"
+	nvim --headless -c "PlenaryBustedDirectory lua"
 
 
 
